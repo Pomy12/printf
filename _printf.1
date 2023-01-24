@@ -1,0 +1,72 @@
+." Process this file width
+." groff -man -Tascii _printf.1
+."
+.TH _printf(1)
+
+.SH NAME
+.B _printf
+- function to print arguments to stdout
+
+.SH SYNOPSIS
+#include <main.h>
+#include <stdarg.h>
+int printf(const char *restrict format, ...);
+.B _printf
+.RB [-x] [-s] [-d] [i] [-b]
+
+.SH Description
+.B _printf
+the functions write the output under the control of a format string that specifies how subsequent arguments (or arguments accessed via the variable-length argument facilities of stdarg(3)) are converted for output.
+.SH Flags
+.I #
+.RS
+For x and X conversions, a nonzero result has the string "0x" (or "0X" for X conversions) prepended to it
+.I +
+.RS
+A sign (+ or -) should always be placed before a number produced by a signed conversion.  By default, a sign is used only for negative numbers.  A + overrides a space if both are used.
+.I "<space> ' '"
+.RS
+(a space) A blank should be left before a positive number (or empty string) produced by a signed conversion.
+.SH "Length Modifier"
+Here the modifier converts integers to the specified modifier 
+.I h 
+.RS 
+convert an integer to short or unsigned short
+.I l 
+.RS 
+convert an integer long or unsigned long int
+.SH conversion specifiers
+.I d, i 
+.RS
+- the argument passed is converted to an integer.The percision if the goven argument is few with regard to the persicion given it is padded to the left with zeroes. The default percision is 1
+.I o, u, x, X
+.RS
+The unsigned int argument is converted to unsigned octal (o), unsigned decimal (u), or unsigned hexadecimal (x and X) notation.
+.I f, F
+.RS
+The double argument is rounded and converted to decimal notation in the style [-]ddd.ddd, where the number of digits after the decimal-point character is equal to the precision specification.
+.SH
+.SH OPTIONS
+.IP "%c"
+print the passed argument as character
+.IP "%i" "%d"
+print the passed argument as an integer (decimal)
+.IP "%x"
+print the passed digit in its hexadecimal form and the letters in lowercase
+.IP "%X"
+printthe passed digit in its hexadecimal form and the letters in UPPERCASE
+.IP "%b"
+print the passed argument in its binary form
+.IP "%o"
+print the unsigned argument as an unsigned octal
+.IP "%p"
+print the passed argument as a pointer
+.IP "%s"
+print the passed pointer to array of characters as a string literal 
+
+.SH RETURN VALUE
+.RS
+upon succesfull execution it will return the number of characters printed. otherwise it returns -1
+
+
+
