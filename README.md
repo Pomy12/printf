@@ -27,10 +27,9 @@ man _printf
 
 ## Authors
 
-Contributors names and contact info
 
-Robel Gebremariam <https://github.com/roba23> 
-Rebecca Asigadom <https://github.com/Pomy12> 
+[@Robel Gebremariam](https://github.com/roba23)
+[@Rebecca Asigadom](https://github.com/Pomy12) 
 ## Version History
 * 0.1
     * Initial Release
