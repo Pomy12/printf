@@ -2,7 +2,7 @@
 
 _printf() function prints arguments to stdout specified by argument specifiers 
 ## Description
-The function repliiates the functions of printf to some extent
+The files used for this project and their description
 * functions.c - File contains function that are used two print string, char, string, int and binary arguments
 * functions1.c - File contains function that are used two print hexa, octal, print_hexa and unsigned arguments 
 * functions2.c - function to print pointer arguments
