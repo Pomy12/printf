@@ -1,6 +1,6 @@
 # _printf 
 
-_printf() function prints arguments to stdout specified by argument specifiers
+_printf() function prints arguments to stdout specified by argument specifiers 
 ## Description
 The function repliiates the functions of printf to some extent
 * functions.c - File contains function that are used two print string, char, string, int and binary arguments
